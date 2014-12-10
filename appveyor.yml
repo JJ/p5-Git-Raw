@@ -1,0 +1,21 @@
+install:
+ - cmd: cd ..
+ - cmd: mkdir perl-sources
+ - appveyor DownloadFile http://downloads.activestate.com/ActivePerl/releases/5.20.1.2000/ActivePerl-5.20.1.2000-MSWin32-x64-298557.zip -FileName perl-sources\ActivePerl-5.20.1-x64.zip
+ - appveyor DownloadFile http://strawberryperl.com/download/5.20.1.1/strawberry-perl-5.20.1.1-64bit.zip -FileName perl-sources\StrawberryPerl-5.20.1-x64.zip
+ - unzip -qq perl-sources\ActivePerl-5.20.1-x64.zip
+ - mv ActivePerl-5.20.1.2000-MSWin32-x64-298557 ActivePerl
+ - unzip -qq perl-sources\StrawberryPerl-5.20.1-x64.zip -d StrawberryPerl
+ - cmd: dir
+ - cmd: cd p5-Git-Raw
+
+cache:
+ - C:\projects\perl-sources
+
+build_script:
+ - dir
+ - cmd: C:\projects\StrawberryPerl\perl\bin\perl scripts\bootstrap_windows.pl App::cpanminus
+ - set PATH=C:\projects\StrawberryPerl\perl\bin;C:\projects\StrawberryPerl\perl\site\bin;C:\projects\StrawberryPerl\c\bin;%PATH%
+ - cpanm --quiet --notest Dist::Zilla Dist::Zilla::PluginBundle::Author::ALEXBIO Pod::Coverage::TrustPod
+ - dzil listdeps --missing | cpanm --quiet --notest
+ - dzil test --all
