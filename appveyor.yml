@@ -24,6 +24,6 @@ build_script:
  - cd ..\p5-Git-Raw
 # - perl scripts\bootstrap_windows.pl App::cpanminus
 # - cpanm --quiet --notest Dist::Zilla Dist::Zilla::PluginBundle::Author::ALEXBIO Pod::Coverage::TrustPod
- - ppm install App::cpanminus Dist::Zilla Dist::Zilla::PluginBundle::Author::ALEXBIO Pod::Coverage::TrustPod
+ - ppm install App-cpanminus Dist-Zilla Dist-Zilla-PluginBundle-Author-ALEXBIO Pod-Coverage-TrustPod
  - dzil listdeps --missing | cpanm --quiet --notest
  - dzil test --all
