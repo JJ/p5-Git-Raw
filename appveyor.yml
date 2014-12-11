@@ -15,7 +15,7 @@ build_script:
  - ppm install App-cpanminus Dist-Zilla Pod-Coverage-TrustPod File-ShareDir-Install File-chdir
  - ppm install ExtUtils-Helpers ExtUtils-Config ExtUtils-InstallPaths Module-Build-Tiny
  - ppm install MooseX-Types-Path-Tiny MooseX-Types-Stringlike
- - ppm install IPC-Run IPC-System-Simple Config-Identity Version-Next syntax autobox Sort-Versions
+ - ppm install IPC-System-Simple Config-Identity Version-Next syntax autobox Sort-Versions
  - ppm install Dist-Zilla-Plugin-MakeMaker-Awesome
  - ppm install IO-CaptureOutput Devel-CheckLib
  - cpanm --notest Dist::Zilla::PluginBundle::Author::ALEXBIO
