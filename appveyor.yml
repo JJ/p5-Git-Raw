@@ -20,7 +20,7 @@ cache:
 build_script:
  - set PATH=C:\projects\ActivePerl\perl\bin;C:\projects\ActivePerl\perl\site\bin;%PATH%
  - cd ActivePerl
- - perl\bin\perl perl\bin\reloc_perl
+ - perl\bin\perl perl\bin\reloc_perl -i
  - cd ..\p5-Git-Raw
  - perl scripts\bootstrap_windows.pl App::cpanminus
  - cpanm --quiet --notest Dist::Zilla Dist::Zilla::PluginBundle::Author::ALEXBIO Pod::Coverage::TrustPod
