@@ -24,8 +24,8 @@ build_script:
  - cd ActivePerl
  - perl\bin\perl perl\bin\reloc_perl -i C:\projects\ActivePerl
  - cd ..\p5-Git-Raw
+ - ppm install App-cpanminus Dist-Zilla Pod-Coverage-TrustPod
 # - perl scripts\bootstrap_windows.pl App::cpanminus
-# - cpanm --quiet --notest Dist::Zilla Dist::Zilla::PluginBundle::Author::ALEXBIO Pod::Coverage::TrustPod
- - ppm install App-cpanminus Dist-Zilla Dist-Zilla-PluginBundle-Author-ALEXBIO Pod-Coverage-TrustPod
+ - cpanm --quiet --notest Dist::Zilla::PluginBundle::Author::ALEXBIO
  - dzil listdeps --missing | cpanm --quiet --notest
  - dzil test --all
