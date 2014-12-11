@@ -6,7 +6,7 @@ install:
  - unzip -qq perl-sources\ActivePerl-5.18.4-x64.zip
  - mv ActivePerl-5.18.4.1803-MSWin32-x64-298573 ActivePerl
  - set PATH=C:\projects\ActivePerl\perl\bin;C:\projects\ActivePerl\perl\site\bin;%PATH%
- - C:\projects\ActivePerl\perl\bin\perl perl\bin\reloc_perl -i C:\projects\ActivePerl\perl
+ - ActivePerl\perl\bin\perl ActivePerl\perl\bin\reloc_perl -i C:\projects\ActivePerl\perl
 
 cache:
  - C:\projects\perl-sources
