@@ -17,6 +17,7 @@ build_script:
  - ppm install MooseX-Types-Path-Tiny MooseX-Types-Stringlike
  - ppm install IPC-Run IPC-System-Simple Config-Identity Version-Next syntax autobox Sort-Versions
  - ppm install Dist-Zilla-Plugin-MakeMaker-Awesome
+ - ppm install IO-CaptureOutput Devel-CheckLib
  - cpanm --notest Dist::Zilla::PluginBundle::Author::ALEXBIO
  - cd p5-Git-Raw
 # - perl scripts\bootstrap_windows.pl App::cpanminus
