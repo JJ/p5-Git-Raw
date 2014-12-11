@@ -22,7 +22,8 @@ build_script:
  - cd ActivePerl
  - perl\bin\perl perl\bin\reloc_perl -i C:\projects\ActivePerl
  - cd ..\p5-Git-Raw
- - perl scripts\bootstrap_windows.pl App::cpanminus
+# - perl scripts\bootstrap_windows.pl App::cpanminus
+ - ppm install App::cpanminus
  - cpanm --quiet --notest Dist::Zilla Dist::Zilla::PluginBundle::Author::ALEXBIO Pod::Coverage::TrustPod
  - dzil listdeps --missing | cpanm --quiet --notest
  - dzil test --all
